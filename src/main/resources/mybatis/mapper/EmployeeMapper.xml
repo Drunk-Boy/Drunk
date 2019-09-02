@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xu.mapper.EmployeeMapper">
+    <!--public Employee getEmpById(Integer id);-->
+    <!--public void insertEmp(Employee employee);-->
+    <select id="getEmpById" resultType="com.xu.entities.Employee">
+        SELECT id,name,age,sex,dept_id FROM employee WHERE id=#{id}
+    </select>
+
+    <insert id="insertEmp">
+        INSERT INTO employee(name,age,sex,dept_id) value (#{name },#{age},#{sex},#{dept.id})
+    </insert>
+</mapper>

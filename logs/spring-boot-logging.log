@@ -1,0 +1,44 @@
+2018/12/15-17:43 [main] INFO  com.xu.SpringBootCrudApplication- Starting SpringBootCrudApplication on DESKTOP-K8AFSGH with PID 12388 (started by 闫旭 in D:\IDEA\idea代码\spring-boot-crud)
+2018/12/15-17:43 [main] INFO  com.xu.SpringBootCrudApplication- No active profile set, falling back to default profiles: default
+2018/12/15-17:43 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8081 (http)
+2018/12/15-17:43 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2018/12/15-17:43 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet Engine: Apache Tomcat/9.0.12
+2018/12/15-17:43 [main] INFO  org.apache.catalina.core.AprLifecycleListener- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\TortoiseSVN-1.9.7.27907-x64-svn-1.9.7.msi\svn\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;E:\xampp\apache\bin;C:\Program Files\Java\jdk1.8.0_181\bin;D:\maven3.5.3\apache-maven-3.5.3\bin;C:\Users\闫旭\AppData\Local\Microsoft\WindowsApps;;.]
+2018/12/15-17:43 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/crud]- Initializing Spring embedded WebApplicationContext
+2018/12/15-17:43 [main] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 2531 ms
+2018/12/15-17:43 [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean- Servlet statViewServlet mapped to [/druid/*]
+2018/12/15-17:43 [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean- Servlet dispatcherServlet mapped to [/]
+2018/12/15-17:43 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean- Mapping filter: 'characterEncodingFilter' to: [/*]
+2018/12/15-17:43 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018/12/15-17:43 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean- Mapping filter: 'formContentFilter' to: [/*]
+2018/12/15-17:43 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean- Mapping filter: 'requestContextFilter' to: [/*]
+2018/12/15-17:43 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2018/12/15-17:43 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping- Adding welcome page template: index
+2018/12/15-17:43 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8081 (http) with context path '/crud'
+2018/12/15-17:43 [main] INFO  com.xu.SpringBootCrudApplication- Started SpringBootCrudApplication in 4.689 seconds (JVM running for 5.479)
+2018/12/15-17:43 [http-nio-8081-exec-3] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/crud]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018/12/15-17:43 [http-nio-8081-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2018/12/15-17:43 [http-nio-8081-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 12 ms
+2018/12/15-17:43 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource- {dataSource-1} inited
+2018/12/15-17:52 [main] INFO  com.xu.SpringBootCrudApplication- Starting SpringBootCrudApplication on DESKTOP-K8AFSGH with PID 6152 (started by 闫旭 in D:\IDEA\idea代码\spring-boot-crud)
+2018/12/15-17:52 [main] INFO  com.xu.SpringBootCrudApplication- No active profile set, falling back to default profiles: default
+2018/12/15-17:52 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat initialized with port(s): 8081 (http)
+2018/12/15-17:52 [main] INFO  org.apache.catalina.core.StandardService- Starting service [Tomcat]
+2018/12/15-17:52 [main] INFO  org.apache.catalina.core.StandardEngine- Starting Servlet Engine: Apache Tomcat/9.0.12
+2018/12/15-17:52 [main] INFO  org.apache.catalina.core.AprLifecycleListener- The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\TortoiseSVN-1.9.7.27907-x64-svn-1.9.7.msi\svn\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;E:\xampp\apache\bin;C:\Program Files\Java\jdk1.8.0_181\bin;D:\maven3.5.3\apache-maven-3.5.3\bin;C:\Users\闫旭\AppData\Local\Microsoft\WindowsApps;;.]
+2018/12/15-17:52 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/crud]- Initializing Spring embedded WebApplicationContext
+2018/12/15-17:52 [main] INFO  org.springframework.web.context.ContextLoader- Root WebApplicationContext: initialization completed in 2871 ms
+2018/12/15-17:52 [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean- Servlet statViewServlet mapped to [/druid/*]
+2018/12/15-17:52 [main] INFO  org.springframework.boot.web.servlet.ServletRegistrationBean- Servlet dispatcherServlet mapped to [/]
+2018/12/15-17:52 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean- Mapping filter: 'characterEncodingFilter' to: [/*]
+2018/12/15-17:52 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018/12/15-17:52 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean- Mapping filter: 'formContentFilter' to: [/*]
+2018/12/15-17:52 [main] INFO  org.springframework.boot.web.servlet.FilterRegistrationBean- Mapping filter: 'requestContextFilter' to: [/*]
+2018/12/15-17:52 [main] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor- Initializing ExecutorService 'applicationTaskExecutor'
+2018/12/15-17:52 [main] INFO  org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping- Adding welcome page template: index
+2018/12/15-17:52 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer- Tomcat started on port(s): 8081 (http) with context path '/crud'
+2018/12/15-17:52 [main] INFO  com.xu.SpringBootCrudApplication- Started SpringBootCrudApplication in 5.058 seconds (JVM running for 5.998)
+2018/12/15-17:53 [http-nio-8081-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/crud]- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018/12/15-17:53 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Initializing Servlet 'dispatcherServlet'
+2018/12/15-17:53 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet- Completed initialization in 11 ms
+2018/12/15-17:53 [http-nio-8081-exec-1] INFO  com.alibaba.druid.pool.DruidDataSource- {dataSource-1} inited

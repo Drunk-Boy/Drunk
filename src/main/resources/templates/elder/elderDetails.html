@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- webjars的引用 ("/webjars/**") == "classpath:/META-INF/resources/webjars/"-->
+    <link href="webjars/bootstrap/4.1.3/css/bootstrap.css" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.css}" rel="stylesheet">
+    <link href="asserts/css/stype.css" th:href="@{/asserts/css/stype.css}" rel="stylesheet" type="text/css">
+    <!--<link href="asserts/css/stype.css" th:href="@{/asserts/css/stype.css}" rel="stylesheet">-->
+    <script src="webjars/jquery/3.3.1-1/jquery.js" th:src="@{/webjars/jquery/3.3.1-1/jquery.min.js}" rel="stylesheet"></script>
+    <script src="webjars/bootstrap/4.1.3/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.min.js}"></script>
+    <script src="upload/fileUpload.js" th:src="@{/upload/fileUpload.js}" rel="stylesheet" type="text/javascript"></script>
+    <script src="upload/upload.js" th:src="@{/upload/upload.js}" rel="stylesheet" type="text/javascript"></script>
+    <script type="text/javascript" th:inline="javascript">
+        // 获取项目根路径
+        var basePath = /*[[${#httpServletRequest.getScheme() + "://" + #httpServletRequest.getServerName() + ":" + #httpServletRequest.getServerPort() + #httpServletRequest.getContextPath()}]]*/;
+
+        function download(id){
+            $.ajax({
+                type: "POST",
+                url: basePath+"/elder/download",
+                data: "id="+id,
+                success: function(url){
+                    // window.location.replace("94.191.102.105:80/images/yx/2019-05-06%2017:52:45-aa.docx");
+                    var addr = "http://94.191.102.105";
+                    var Url = url;
+                    // "http://94.191.102.105/images/yx/2019-05-06%2017:52:45-aa.docx"
+                    window.location.replace(addr+Url);
+                }
+            });
+        }
+
+
+        function edit() {
+            $("#form").attr("method","POST");
+            $("#form").attr("action",basePath+"/elder/edit");
+            $("#form").submit();
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <!--导航栏-->
+        <div th:insert="~{top :: top_nav}"></div>
+        <hr/>
+        <form id="form" action="#" th:action="@{/elder/save}"  method="POST" th:object="${elder}">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-4">
+                    老人信息
+                    <input  th:value="${elder.id}" name="id" type="hidden" >
+                    <input th:value="${elder.fileId}" name="fileId" type="hidden">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="elderName">姓名</span>
+                        </div>
+                        <input name="elderName" type="text" class="form-control" readonly="readonly" th:value="${elder.elderName}">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">性别</span>
+                        </div>
+                        <input name="gender" id="gender" type="text" class="form-control" readonly="readonly" th:value="${elder.gender}">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="age">年龄</span>
+                        </div>
+                        <input name="age" type="text" class="form-control" readonly="readonly" th:value="${elder.age}">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="nation">民族</span>
+                        </div>
+                        <input name="nation" type="text" class="form-control" readonly="readonly" th:value="${elder.nation}">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="address">住址</span>
+                        </div>
+                        <input name="address" type="text" class="form-control" readonly="readonly" th:value="${elder.address}">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="medicalHistory">病史</span>
+                        </div>
+                        <input name="medicalHistory" type="text" class="form-control" readonly="readonly" th:value="${elder.medicalHistory}">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="careOfOneself">自理能力</span>
+                        </div>
+                        <input name="careOfOneself" type="text" class="form-control" readonly="readonly" th:value="${elder.careOfOneself}">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="room">房号</span>
+                        </div>
+                        <input name="room" type="text" class="form-control" readonly="readonly" th:value="${elder.room}">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="bed">床号</span>
+                        </div>
+                        <input name="bed" type="text" class="form-control" readonly="readonly" th:value="${elder.bed}">
+                    </div>
+                    <hr/>
+                    家属信息
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="caregiversName">名字</span>
+                        </div>
+                        <input name="caregiversName" type="text" class="form-control" readonly="readonly" th:value="${elder.caregiversName}">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="relationsElder">关系</span>
+                        </div>
+                        <input name="relationsElder" type="text" class="form-control" readonly="readonly" th:value="${elder.relationsElder}">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="phone">电话</span>
+                        </div>
+                        <input name="phone" type="text" class="form-control" readonly="readonly" th:value="${elder.phone}">
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col-10" >
+                                <div class="card" style="width:300px">
+                                    <p class="font-weight-bold" align="center">附件</p>
+                                    <img id="file" class="card-img-top" th:src="@{/portrait/uploadView/kong.jpg.}" alt="Card image" width="300" height="200">
+                                    <button th:data-fileid="${elder.fileId}" onclick="download(this.getAttribute('data-fileid'))" th:if="${isDetails=='details' and elder.fileId != null}" type="button" class="btn btn-light" aria-label="Left Align">
+                                        <span class="glyphicon glyphicon-save" aria-hidden="true"></span>
+                                    </button>
+                                    <div class="card-body"></div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5"></div>
+                <div class="col-2" th:if="${isDetails!='details'}">
+                    <a class="btn btn-secondary">上一步</a>
+                    <button id="save" th:if="${elder.id<0}" type="submit" class="btn btn-success">保存</button>
+                    <button th:onclick="edit()" th:if="${elder.id>0}" id="dite" class="btn btn-success">修改</button>
+                </div>
+                <div class="col-5"></div>
+            </div>
+        </form>
+    </div>
+<script type="text/javascript" th:inline="javascript">
+    var basePath = /*[[${#httpServletRequest.getScheme() + "://" + #httpServletRequest.getServerName() + ":" + #httpServletRequest.getServerPort() + #httpServletRequest.getContextPath()}]]*/;
+
+    $(function () {
+        // alert([[${isDetails}]])
+        if([[${elder.fileId}]].length!=0 && [[${elder.fileId}]]!=''){
+            // 因为ftp服务器访问不加根目录，所以切割掉根目录,再拼接斜杠 根目录为/www/images/yx
+            var fileUrl = [[${elder.file.ftpUrl}]].substring(4)+"/";
+            //获取ftp中的文件名字
+            var ftpName = [[${elder.file.ftpName}]];
+            //获取文件后缀
+            var fileSuffix =ftpName.split(".").pop();
+            //获取文件名
+            var fileName = [[${elder.file.fileName}]]
+            //获取显示文件标签
+            var img = $("#file");
+            //项目图片的相对位置
+            var path = "/portrait/uploadView/";
+            if(fileSuffix=="doc" || fileSuffix=="docx"){
+                img.attr("src",basePath+path+"word.jpg");
+                $(".card-body").text(fileName);
+            }else if(fileSuffix=="ppt" || fileSuffix=="pptx"){
+                img.attr("src",basePath+path+"ppt.jpg");
+            }else if(fileSuffix=="xlsx"){
+                img.attr("src",basePath+path+"excel.jpg");
+            }else {
+                img.attr("src",fileUrl+ftpName);
+            }
+            // alert("fileUrl="+fileUrl);
+            // alert("fileName="+(fileSuffix=="doc"));
+        }else {
+            $(".card").empty();
+            $(".card").append('<h1 align="center">附件为空</h1>')
+        }
+    })
+</script>
+</body>
+</html>

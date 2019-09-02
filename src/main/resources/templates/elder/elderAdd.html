@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- webjars的引用 ("/webjars/**") == "classpath:/META-INF/resources/webjars/"-->
+    <link href="webjars/bootstrap/4.1.3/css/bootstrap.css" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.css}" rel="stylesheet">
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.5.1/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />-->
+    <link href="webjars/bootstrap-fileinput/4.4.8/css/fileinput.min.css" th:href="@{/webjars/bootstrap-fileinput/4.4.8/css/fileinput.min.css}" rel="stylesheet" />
+    <link href="webjars/bootstrap-fileinput/4.4.8/themes/explorer/theme.css" th:href="@{/webjars/bootstrap-fileinput/4.4.8/themes/explorer/theme.css}" rel="stylesheet"/>
+    <link href="webjars/font-awesome/5.6.1/css/fontawesome.min.css" th:href="@{/webjars/font-awesome/5.6.1/css/fontawesome.min.css}" rel="stylesheet"/>
+    <link href="asserts/css/stype.css" th:href="@{/asserts/css/stype.css}" rel="stylesheet" type="text/css">
+    <script src="webjars/jquery/3.3.1-1/jquery.js" th:src="@{/webjars/jquery/3.3.1-1/jquery.min.js}" rel="stylesheet"></script>
+    <script src="webjars/bootstrap-fileinput/4.4.8/js/plugins/piexif.min.js" th:src="@{/webjars/bootstrap-fileinput/4.4.8/js/plugins/piexif.min.js}" rel="stylesheet"></script>
+    <script src="webjars/bootstrap-fileinput/4.4.8/js/plugins/sortable.min.js" th:src="@{/webjars/bootstrap-fileinput/4.4.8/js/plugins/sortable.min.js}" rel="stylesheet"></script>
+    <script src="webjars/bootstrap-fileinput/4.4.8/js/plugins/purify.min.js" th:src="@{/webjars/bootstrap-fileinput/4.4.8/js/plugins/purify.min.js}" rel="stylesheet"></script>
+    <script src="webjars/bootstrap/4.1.3/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.min.js}" rel="stylesheet"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.5.1/js/fileinput.min.js"></script>-->
+    <script src="webjars/bootstrap-fileinput/4.4.8/js/fileinput.min.js" th:src="@{/webjars/bootstrap-fileinput/4.4.8/js/fileinput.min.js}" rel="stylesheet" ></script>
+    <script src="webjars/bootstrap-fileinput/4.4.8/themes/explorer/theme.js" th:src="@{/webjars/bootstrap-fileinput/4.4.8/themes/explorer/theme.js}" rel="stylesheet"></script>
+    <script src="webjars/bootstrap-fileinput/4.4.8/js/locales/zh.js" th:src="@{/webjars/bootstrap-fileinput/4.4.8/js/locales/zh.js}" rel="stylesheet"></script>
+    <script src="upload/fileUpload.js" th:src="@{/upload/fileUpload.js}" rel="stylesheet" type="text/javascript"></script>
+    <script type="text/javascript" th:inline="javascript">
+        var basePath = /*[[${#httpServletRequest.getScheme() + "://" + #httpServletRequest.getServerName() + ":" + #httpServletRequest.getServerPort() + #httpServletRequest.getContextPath()}]]*/;
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <!--文件上传模态框-->
+        <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input name="reportFile" id ="txt_file" type="file" class="form-control inline-form-control">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">返回</button>
+                        <button type="button" class="btn btn-primary">上传</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--导航栏-->
+        <div th:insert="~{top :: top_nav}"></div>
+        <hr/>
+        <!--表单-->
+        <form id="addForm" action="#" th:action="@{/elder/details}" method="POST" th:object="${elder}">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-4">
+                    老人信息
+                    <!--通过id判断是否从编辑过来-->
+                    <input  th:value="${elder.id}" name="id" type="hidden" >
+                    <!--提交表单时，提交文件id-->
+                    <input name="fileId" type="hidden" id="addfileId">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="elderName">姓名</span>
+                        </div>
+                        <input th:value="${elder.elderName}" name="elderName" type="text" class="form-control" placeholder="elderName" aria-label="elderName" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="gender">性别</span>
+                        </div>
+                        <select  th:value="${elder.gender}" name="gender" class="custom-select" id="inputGroupSelect01">
+                            <option value="1">男</option>
+                            <option value="0">女</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="age">年龄</span>
+                        </div>
+                        <input th:value="${elder.age} " name="age" type="text" class="form-control" placeholder="age" aria-label="age" aria-describedby="basic-addon1">
+                        <!--<input th:if="${elder.age==null or elder.age==''}" name="age" type="text" class="form-control" placeholder="age" aria-label="age" aria-describedby="basic-addon1">-->
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="nation">民族</span>
+                        </div>
+                        <input th:value="${elder.nation}" name="nation" type="text" class="form-control" placeholder="nation" aria-label="nation" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="address">住址</span>
+                        </div>
+                        <input th:value="${elder.address}" name="address" type="text" class="form-control" placeholder="address" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="medicalHistory">病史</span>
+                        </div>
+                        <input th:value="${elder.medicalHistory}" name="medicalHistory" type="text" class="form-control" placeholder="medicalHistory" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="careOfOneself">自理能力</span>
+                        </div>
+                        <input th:value="${elder.careOfOneself}" name="careOfOneself" type="text" class="form-control" placeholder="careOfOneself" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="room">房号</span>
+                        </div>
+                        <input  th:value="${elder.room}" name="room" type="text" class="form-control" placeholder="room" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="bed">床号</span>
+                        </div>
+                        <input  th:value="${elder.bed}" name="bed" type="text" class="form-control" placeholder="bed" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+
+                    <hr/>
+                    家属信息
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="caregiversName">姓名</span>
+                        </div>
+                        <input th:value="${elder.caregiversName}" name="caregiversName" type="text" class="form-control" placeholder="caregiversName" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="relationsElder">关系</span>
+                        </div>
+                        <input th:value="${elder.relationsElder}" name="relationsElder" type="text" class="form-control" placeholder="relationsElder" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="phone">电话</span>
+                        </div>
+                        <input  th:value="${elder.phone}" name="phone" type="text" class="form-control" placeholder="phone" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+
+                    <hr/>
+                    文件上传
+                    <div class="input-group mb-3">
+                        <button id="file_input" type="button" class="btn btn-secondary btn-block" data-toggle="modal" data-target="#exampleModal">文件上传</button>
+                    </div>
+                </div>
+                <div class="col-sm-5"></div>
+            </div>
+            <div class="row">
+                <div class="col-5"></div>
+                <div class="col-2">
+                    <a class="btn btn-secondary">上一步</a>
+                    <button type="submit" class="btn btn-success">下一步</button>
+                </div>
+                <div class="col-5"></div>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- webjars的引用 ("/webjars/**") == "classpath:/META-INF/resources/webjars/"-->
+    <link href="webjars/bootstrap/4.1.3/css/bootstrap.css" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.css}" rel="stylesheet">
+    <link href="asserts/css/stype.css" th:href="@{/asserts/css/stype.css}" rel="stylesheet">
+    <!--<style type="text/css">-->
+        <!--#danger{-->
+            <!--visibility:hidden;-->
+        <!--}-->
+    <!--</style>-->
+    <script src="webjars/jquery/3.3.1-1/jquery.js" th:src="@{/webjars/jquery/3.3.1-1/jquery.min.js}" rel="stylesheet"></script>
+    <script src="webjars/bootstrap/4.1.3/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:inline="javascript">
+        var basePath = /*[[${#httpServletRequest.getScheme() + "://" + #httpServletRequest.getServerName() + ":" + #httpServletRequest.getServerPort() + #httpServletRequest.getContextPath()}]]*/;
+
+        $(document).ready(function(){
+            $("#userName").blur(function(){
+                var velue = $("#userName").val();
+                $.ajax({
+                    type: "POST",
+                    url: basePath+"/user/register",
+                    data: "velue="+velue,
+                    success: function(msg){
+                        // alert(msg)
+                        if(msg=="fail"){
+                            $("#msgNo").css("display","none");
+                            $("#msgNothingness").css("display","");
+                            $("#button").css("visibility","hidden");
+                        }else if(msg=="new"){
+                            $("#msgNothingness").css("display","none");
+                            $("#msgNo").css("display","");
+                            $("#button").css("visibility","hidden");
+                        }else if(msg=="success"){
+                            $("#msgNothingness").css("display","none");
+                            $("#msgNo").css("display","none");
+                            $("#button").css("visibility","");
+                        }
+                    }
+                });
+            });
+        });
+        // function userName(value) {
+        //
+        // }
+    </script>
+</head>
+<body>
+<div class="container">
+    <div th:class="row" style="margin-top: 300px">
+        <div class="col"></div>
+        <div class="col-5">
+            <form action="#" th:action="@{/register}" method="POST" th:object="${user}">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1" >Username</span>
+                    </div>
+                    <input th:onclick="userName()" id="userName" name="userName" type="text" class="form-control">
+                </div>
+                <div id="msgNo" style="display:none" class="alert alert-danger" role="alert">
+                    请填写需要注册的用户名
+                </div>
+                <div id="msgNothingness" style="display:none" class="alert alert-danger" role="alert">
+                    该用户已存在
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon2">Password</span>
+                    </div>
+                    <input name="passWord" type="text" class="form-control">
+                </div>
+                <div id="button" class="btn">
+                    <button type="submit" class="btn btn-secondary btn-lg">注册</button>
+                </div>
+                <a th:href="@{/}" class="btn btn-secondary btn-lg">返回</a>
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+</body>
+</html>

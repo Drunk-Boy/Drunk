@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xu.mapper.ElderMapper">
+    <sql id="Elder_Column_List">
+      elder_name,gender,nation,age,address,medical_history,care_of_oneself,caregivers_name,relations_elder,phone,room,bed,portrait,file_id
+    </sql>
+    <sql id="Elder_Property_List">
+        #{elderName},#{gender},#{nation},#{age},#{address},#{medicalHistory},#{careOfOneself},#{caregiversName},#{relationsElder},#{phone},#{room},#{bed},#{portrait},#{fileId}
+    </sql>
+    <!--联合文件查询-->
+    <resultMap id="WithFileResultMap" type="com.xu.entities.Elder">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="elder_name" jdbcType="VARCHAR" property="elderName" />
+        <result column="gender" jdbcType="INTEGER" property="gender" />
+        <result column="nation" jdbcType="VARCHAR" property="nation" />
+        <result column="age" jdbcType="VARCHAR" property="age" />
+        <result column="address" jdbcType="VARCHAR" property="address" />
+        <result column="medical_history" jdbcType="VARCHAR" property="medicalHistory" />
+        <result column="care_of_oneself" jdbcType="VARCHAR" property="careOfOneself" />
+        <result column="caregivers_name" jdbcType="VARCHAR" property="caregiversName" />
+        <result column="relations_elder" jdbcType="VARCHAR" property="relationsElder" />
+        <result column="phone" jdbcType="INTEGER" property="phone" />
+        <result column="room" jdbcType="INTEGER" property="room" />
+        <result column="bed" jdbcType="INTEGER" property="bed" />
+        <result column="portrait" jdbcType="VARCHAR" property="portrait" />
+        <result column="file_id" jdbcType="INTEGER" property="fileId" />
+        <!-- 使用association指定联合查询的部门字段的封装 -->
+        <association property="file" javaType="com.xu.entities.File">
+            <id column="file_id" property="fileId"/>
+            <result column="file_url" property="fileUrl"/>
+            <result column="file_name" property="fileName"/>
+            <result column="ftp_url" property="ftpUrl"/>
+            <result column="ftp_name" property="ftpName"/>
+        </association>
+    </resultMap>
+
+    <select id="getElderByFile" resultMap="WithFileResultMap">
+        select * from elder e
+        left join file f on e.file_id=f.file_id
+        <where>
+            <if test="id!=null and id!=''">
+               and id=#{id}
+            </if>
+            <if test="elderName!=null and elderName!=''">
+               and elder_name=#{elderName}
+            </if>
+            <if test="caregiversName!=null and caregiversName!=''">
+               and caregivers_name=#{caregiversName}
+            </if>
+        </where>
+    </select>
+
+    <!--查询全部-->
+    <select id="getAllElder" resultType="com.xu.entities.Elder">
+      SELECT * FROM elder
+    </select>
+    
+    <select id="getElderById" resultType="com.xu.entities.Elder">
+        SELECT * FROM elder where id=#{id}
+    </select>
+    
+    <select id="getElder" resultType="com.xu.entities.Elder">
+        SELECT * FROM ELDER
+        <where>
+            <if test="elderName!=null and elderName!=''">
+                elder_name like '%${elderName}%'
+            </if>
+            <if test="caregiversName!=null and caregiversName!=''">
+               and caregivers_name=#{caregiversName}
+            </if>
+        </where>
+    </select>
+
+    <!--增加-->
+    <insert id="insert" parameterType="com.xu.entities.Elder">
+        insert into elder
+      <trim prefix="(" suffix=")" suffixOverrides=",">
+        <include refid="Elder_Column_List"/>
+      </trim>
+      <trim prefix="values (" suffix=")" suffixOverrides=",">
+          <include refid="Elder_Property_List"/>
+      </trim>
+    </insert>
+
+    <!--UPDATE 表名称 SET 列名称 = 新值 WHERE 列名称 = 某值-->
+    <update id="elderUpdate" parameterType="com.xu.entities.Elder">
+      update elder set
+        elder_name=#{elderName},
+        gender=#{gender},
+        nation=#{nation},
+        age=#{age},
+        address=#{address},
+        medical_history=#{medicalHistory},
+        care_of_oneself=#{careOfOneself},
+        caregivers_name=#{caregiversName},
+        relations_elder=#{relationsElder},
+        phone=#{phone},
+        room=#{room},
+        bed=#{bed},
+        portrait=#{portrait}
+      where id=#{id}
+    </update>
+
+    <delete id="elderDeleteById">
+        DELETE FROM elder where id=#{id}
+    </delete>
+</mapper>

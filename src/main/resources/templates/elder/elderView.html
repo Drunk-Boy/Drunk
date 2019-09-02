@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- webjars的引用 ("/webjars/**") == "classpath:/META-INF/resources/webjars/"-->
+    <link href="webjars/bootstrap/4.1.3/css/bootstrap.css" th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.css}" rel="stylesheet">
+    <link href="asserts/stype.css" th:href="@{/asserts/stype.css}" rel="stylesheet">
+    <script src="webjars/jquery/3.3.1-1/jquery.js" th:src="@{/webjars/jquery/3.3.1-1/jquery.min.js}" rel="stylesheet"></script>
+    <script src="webjars/bootstrap/4.1.3/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/4.1.3/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:inline="javascript">
+        var yes = false;
+        // 获取项目根路径
+        var basePath = /*[[${#httpServletRequest.getScheme() + "://" + #httpServletRequest.getServerName() + ":" + #httpServletRequest.getServerPort() + #httpServletRequest.getContextPath()}]]*/;
+        //编辑按钮单击事件
+        function MyEdit(id) {
+
+            $("#elderFormElder").val(id);
+            $("#elderForm").attr("action",basePath+"/emp/add");
+            $("#elderForm").submit();
+        }
+        
+        
+        // 激活删除的ajax请求
+        function getYes() {
+            yes = true;
+            $('#exampleModal').modal('hide')
+        }
+        //删除按钮的单击事件
+        function MyDelete(ths,id){
+            // 激活模态框
+            $('#exampleModal').modal({
+                keyboard: false,
+                options:true
+            });
+            // hidden.bs.modal在模态框消失后执行function方法
+            $("#exampleModal").on("hidden.bs.modal",function () {
+                if(yes){
+                    $.ajax({
+                        type: "DELETE",
+                        url: basePath + "/elder/delete",
+                        data: "id=" + id,
+                        success: function (msg) {
+                            location.reload(true);
+                        }
+                    });
+                }
+            })
+            // alert(ths);
+            // alert(id);
+        }
+        function page(index) {
+            var input = $("<input type='hidden' name='pn' value='"+index+"'>");
+            $("#selectForm").append(input);
+            $("#selectForm").submit();
+        }
+
+        $(document).ready(function(){
+            var nexPage = [[${page.hasNextPage}]];
+            var prePage = [[${page.hasPreviousPage}]];
+            if(prePage==false){
+                $("#pre_page").css("class","page-item disabled");
+            }else if(nexPage==false){
+                $("#nex_page").css("class","page-item disabled");
+            }
+
+        });
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+    <!--隐藏的表单，为使ajax发送POST请求跳转到add页面-->
+    <form id="elderForm" action="" method="post" th:object="${elder}">
+        <input id="elderFormElder" name="id" type="hidden"/>
+    </form>
+    <!--删除老人模态框-->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">提示</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    您确定要删除此条数据吗？
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button onclick="getYes()" type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--导航栏-->
+    <div th:insert="~{top :: top_nav}"></div>
+    <hr/>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <!--头像-->
+            <!--<div class="row">-->
+                <!--<div class="col-10"></div>-->
+                <!--<div class="col-2">-->
+                    <!--<img src="timg.jpg" th:src="${/timg}" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--查询-->
+            <form id="selectForm" action="#" th:action="@{/emp/select}" method="POST" th:object="${elder}">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="input-group mb-3">
+                            <input name="elderName" type="text" class="form-control" placeholder="(老人)姓名" aria-label="elderName" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="input-group mb-3">
+                            <input name="caregiversName" type="text" class="form-control" placeholder="(监护人)姓名" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-1">
+                        <button type="submit" class="btn btn-secondary">查询</button>
+                    </div>
+                    <div class="col-1">
+                        <button th:onclick="MyEdit(-1)" type="button" class="btn btn-secondary">添加</button>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+            </form>
+            <hr/>
+            <!--表格-->
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">姓名</th>
+                    <th scope="col">性别</th>
+                    <th scope="col">年龄</th>
+                    <th scope="col">民族</th>
+                    <th scope="col">住址</th>
+                    <th scope="col">房号</th>
+                    <th scope="col">床号</th>
+                    <th scope="col">监护人名字</th>
+                    <th scope="col">(监护人)电话</th>
+                    <th scope="co2">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!--userStat是状态，count从1开始-->
+                <tr th:each="list,userStat:${page.list}">
+                    <th th:text="${userStat.count}" scope="row">1</th>
+                    <td><a th:href="@{elder/editDetails(id=${list.id})}">[[${list.elderName}]]</a></td>
+                    <td th:text="${list.gender==1}? 男:女">Otto</td>
+                    <td th:text="${list.age}">@mdo</td>
+                    <td th:text="${list.nation}">@mdo</td>
+                    <td th:text="${list.address}">@mdo</td>
+                    <td th:text="${list.room}">@mdo</td>
+                    <td th:text="${list.bed}">@mdo</td>
+                    <td th:text="${list.caregiversName}">@mdo</td>
+                    <td th:text="${list.phone}">@mdo</td>
+                    <td>
+                        <button th:onclick="'MyEdit('+${list.id}+')'" type="button" class="btn btn-success">编辑</button>
+                        <button th:onclick="'MyDelete('+this+','+${list.id}+')'" type="button"  class="btn btn-danger">删除</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-7"></div>
+        <div class="col-sm-4">
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li id="pre_page" class="page-item">
+                        <span class="page-link" th:onclick="'page('+${page.prePage}+')'">上一页</span>
+                    </li>
+                    <li th:if="(${page.prePage}-1)>${page.navigateFirstPage}-1" class="page-item"><a th:onclick="'page('+${page.prePage}-1+')'" class="page-link" href="#" th:text="${page.prePage}-1"></a></li>
+                    <li th:if="${page.prePage}>${page.navigateFirstPage}-1" class="page-item"><a th:onclick="'page('+${page.prePage}+')'" class="page-link" href="#" th:text="${page.prePage}"></a></li>
+                    <li class="page-item active">
+                      <span class="page-link" th:text="${page.pageNum}">
+                        <span class="sr-only">(current)</span>
+                      </span>
+                    </li>
+                    <li th:if="${page.nextPage}!=0" th:onclick="'page('+${page.nextPage}+')'" class="page-item"><a class="page-link" href="#" th:text="${page.nextPage}"></a></li>
+                    <li th:if="${page.nextPage}!=${page.navigateLastPage} and ${page.nextPage}!=0 " class="page-item"><a th:onclick="'page('+${page.nextPage}+1+')'" class="page-link" href="#" th:text="${page.nextPage}+1"></a></li>
+                    <li class="page-item">
+                        <a id="nex_page" class="page-link" th:onclick="'page('+${page.nextPage}+')'">下一页</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+</body>
+</html>

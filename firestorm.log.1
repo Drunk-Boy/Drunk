@@ -1,0 +1,1038 @@
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20002} Types : []
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20002} executed. 57.0157 millis. SELECT count(0) FROM elder e LEFT JOIN file f ON e.file_id = f.file_id
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20002, rs-50004} open
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20002, rs-50004} Header: [count(0)]
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20002, rs-50004} Result: [11]
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20002, rs-50004} closed
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20002} clearParameters. 
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20003} created. select * from elder e
+        left join file f on e.file_id=f.file_id LIMIT ? 
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20003} Parameters : [5]
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20003} Types : [INTEGER]
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20003} executed. 2.7298 millis. select * from elder e
+        left join file f on e.file_id=f.file_id LIMIT ? 
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20003, rs-50005} open
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20003, rs-50005} Header: [id, elder_name, gender, nation, age, address, medical_history, care_of_oneself, caregivers_name, relations_elder, phone, room, bed, portrait, file_id, file_id, file_url, file_name, ftp_url, ftp_name]
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20003, rs-50005} Result: [18, 刘, 0, 汉, 12, 山大双误, dsad, dsad, 刘儿子, 1, 15934584985, 1, 1, null, 70, 70, /www/images/yx, login_bg1.png, /www/images/yx, 2019-05-05 22:23:52-login_bg1.png]
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20003, rs-50005} Result: [19, 刘2222, 1, buzhi, 12, 山大双误, dsad, dsad, 刘儿子, 1, 15934584985, 1, 1, null, 71, 71, /www/images/yx, 新建 Microsoft Word 文档.docx, /www/images/yx, 2019-05-05 22:26:26-新建 Microsoft Word 文档.docx]
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20003, rs-50005} Result: [20, 222, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, null, 72, 72, /www/images/yx, bb.docx, /www/images/yx, 2019-06-16 21:01:22-bb.docx]
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20003, rs-50005} Result: [1, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null, null, null, null, null, null]
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20003, rs-50005} Result: [2, 李某某, 0, 藏族, 88, 大同, 无, 无自理能力, 李某某的女儿, 女儿, 12738432348, 5, 2, , null, null, null, null, null, null]
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20003, rs-50005} closed
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20003} clearParameters. 
+DEBUG http-nio-8081-exec-8 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-10 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20004} created. SELECT count(0) FROM ELDER
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20004} Parameters : []
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20004} Types : []
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20004} executed. 0.7235 millis. SELECT count(0) FROM ELDER
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50006} open
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50006} Header: [count(0)]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50006} Result: [11]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50006} closed
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20004} clearParameters. 
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20005} created. SELECT * FROM ELDER LIMIT ?, ? 
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20005} Parameters : [5, 5]
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20005} Types : [INTEGER, INTEGER]
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20005} executed. 1.3049 millis. SELECT * FROM ELDER LIMIT ?, ? 
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50007} open
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50007} Header: [id, elder_name, gender, nation, age, address, medical_history, care_of_oneself, caregivers_name, relations_elder, phone, room, bed, portrait, file_id]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50007} Result: [13, 122, 1, 1, 1222, 1, 1, 1, 1, 1, 1, 1, 1, , null]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50007} Result: [14, 李某某, 1, 1, 188, 1, 1, 1, 李某某儿子, 1, 1, 1, 1, null, null]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50007} Result: [15, 李某某, 0, 1, 1943, 1, 1, 1, 1, 1, 1, 1, 1, null, null]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50007} Result: [18, 刘, 0, 汉, 12, 山大双误, dsad, dsad, 刘儿子, 1, 15934584985, 1, 1, null, 70]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50007} Result: [19, 刘2222, 1, buzhi, 12, 山大双误, dsad, dsad, 刘儿子, 1, 15934584985, 1, 1, null, 71]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50007} closed
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20005} clearParameters. 
+DEBUG http-nio-8081-exec-10 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20004} Parameters : []
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20004} Types : []
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20004} executed. 0.9125 millis. SELECT count(0) FROM ELDER
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50008} open
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50008} Header: [count(0)]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50008} Result: [11]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50008} closed
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20004} clearParameters. 
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20006} created. SELECT * FROM ELDER LIMIT ? 
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20006} Parameters : [5]
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20006} Types : [INTEGER]
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20006} executed. 1.3814 millis. SELECT * FROM ELDER LIMIT ? 
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50009} open
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50009} Header: [id, elder_name, gender, nation, age, address, medical_history, care_of_oneself, caregivers_name, relations_elder, phone, room, bed, portrait, file_id]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50009} Result: [1, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50009} Result: [2, 李某某, 0, 藏族, 88, 大同, 无, 无自理能力, 李某某的女儿, 女儿, 12738432348, 5, 2, , null]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50009} Result: [3, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50009} Result: [4, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50009} Result: [5, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50009} closed
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20006} clearParameters. 
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-5 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20007} created. SELECT count(0) FROM ELDER WHERE caregivers_name = ?
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20007} Parameters : [刘某某儿子]
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20007} Types : [VARCHAR]
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20007} executed. 1.0177 millis. SELECT count(0) FROM ELDER WHERE caregivers_name = ?
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20007, rs-50010} open
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20007, rs-50010} Header: [count(0)]
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20007, rs-50010} Result: [4]
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20007, rs-50010} closed
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20007} clearParameters. 
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20008} created. SELECT * FROM ELDER
+         WHERE  caregivers_name=? LIMIT ? 
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20008} Parameters : [刘某某儿子, 5]
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20008} Types : [VARCHAR, INTEGER]
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20008} executed. 1.0415 millis. SELECT * FROM ELDER
+         WHERE  caregivers_name=? LIMIT ? 
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20008, rs-50011} open
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20008, rs-50011} Header: [id, elder_name, gender, nation, age, address, medical_history, care_of_oneself, caregivers_name, relations_elder, phone, room, bed, portrait, file_id]
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20008, rs-50011} Result: [1, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20008, rs-50011} Result: [3, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20008, rs-50011} Result: [4, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20008, rs-50011} Result: [5, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20008, rs-50011} closed
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20008} clearParameters. 
+DEBUG http-nio-8081-exec-5 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-6 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20009} created. SELECT count(0) FROM ELDER WHERE elder_name LIKE '%刘某某%'
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20009} Parameters : []
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20009} Types : []
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20009} executed. 7.5406 millis. SELECT count(0) FROM ELDER WHERE elder_name LIKE '%刘某某%'
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20009, rs-50012} open
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20009, rs-50012} Header: [count(0)]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20009, rs-50012} Result: [4]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20009, rs-50012} closed
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20009} clearParameters. 
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20010} created. SELECT * FROM ELDER
+         WHERE elder_name like '%刘某某%' LIMIT ? 
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20010} Parameters : [5]
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20010} Types : [INTEGER]
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20010} executed. 1.2213 millis. SELECT * FROM ELDER
+         WHERE elder_name like '%刘某某%' LIMIT ? 
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20010, rs-50013} open
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20010, rs-50013} Header: [id, elder_name, gender, nation, age, address, medical_history, care_of_oneself, caregivers_name, relations_elder, phone, room, bed, portrait, file_id]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20010, rs-50013} Result: [1, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20010, rs-50013} Result: [3, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20010, rs-50013} Result: [4, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20010, rs-50013} Result: [5, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20010, rs-50013} closed
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20010} clearParameters. 
+DEBUG http-nio-8081-exec-6 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-9 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20004} Parameters : []
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20004} Types : []
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20004} executed. 0.8843 millis. SELECT count(0) FROM ELDER
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50014} open
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50014} Header: [count(0)]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50014} Result: [11]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50014} closed
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20004} clearParameters. 
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20006} Parameters : [5]
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20006} Types : [INTEGER]
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20006} executed. 1.2116 millis. SELECT * FROM ELDER LIMIT ? 
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50015} open
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50015} Header: [id, elder_name, gender, nation, age, address, medical_history, care_of_oneself, caregivers_name, relations_elder, phone, room, bed, portrait, file_id]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50015} Result: [1, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50015} Result: [2, 李某某, 0, 藏族, 88, 大同, 无, 无自理能力, 李某某的女儿, 女儿, 12738432348, 5, 2, , null]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50015} Result: [3, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50015} Result: [4, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50015} Result: [5, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50015} closed
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20006} clearParameters. 
+DEBUG http-nio-8081-exec-9 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-10 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20004} Parameters : []
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20004} Types : []
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20004} executed. 0.6805 millis. SELECT count(0) FROM ELDER
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50016} open
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50016} Header: [count(0)]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50016} Result: [11]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50016} closed
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20004} clearParameters. 
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20005} Parameters : [5, 5]
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20005} Types : [INTEGER, INTEGER]
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20005} executed. 0.9135 millis. SELECT * FROM ELDER LIMIT ?, ? 
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50017} open
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50017} Header: [id, elder_name, gender, nation, age, address, medical_history, care_of_oneself, caregivers_name, relations_elder, phone, room, bed, portrait, file_id]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50017} Result: [13, 122, 1, 1, 1222, 1, 1, 1, 1, 1, 1, 1, 1, , null]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50017} Result: [14, 李某某, 1, 1, 188, 1, 1, 1, 李某某儿子, 1, 1, 1, 1, null, null]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50017} Result: [15, 李某某, 0, 1, 1943, 1, 1, 1, 1, 1, 1, 1, 1, null, null]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50017} Result: [18, 刘, 0, 汉, 12, 山大双误, dsad, dsad, 刘儿子, 1, 15934584985, 1, 1, null, 70]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50017} Result: [19, 刘2222, 1, buzhi, 12, 山大双误, dsad, dsad, 刘儿子, 1, 15934584985, 1, 1, null, 71]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50017} closed
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20005} clearParameters. 
+DEBUG http-nio-8081-exec-10 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10005, pstmt-20004} Parameters : []
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10005, pstmt-20004} Types : []
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10005, pstmt-20004} executed. 0.7394 millis. SELECT count(0) FROM ELDER
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50018} open
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50018} Header: [count(0)]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50018} Result: [11]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50018} closed
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10005, pstmt-20004} clearParameters. 
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10005, pstmt-20005} Parameters : [10, 5]
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10005, pstmt-20005} Types : [INTEGER, INTEGER]
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10005, pstmt-20005} executed. 1.274 millis. SELECT * FROM ELDER LIMIT ?, ? 
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50019} open
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50019} Header: [id, elder_name, gender, nation, age, address, medical_history, care_of_oneself, caregivers_name, relations_elder, phone, room, bed, portrait, file_id]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50019} Result: [20, 222, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, null, 72]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50019} closed
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10005, pstmt-20005} clearParameters. 
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-4 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20004} Parameters : []
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20004} Types : []
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20004} executed. 0.9287 millis. SELECT count(0) FROM ELDER
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50020} open
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50020} Header: [count(0)]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50020} Result: [11]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50020} closed
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20004} clearParameters. 
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20005} Parameters : [5, 5]
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20005} Types : [INTEGER, INTEGER]
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20005} executed. 1.2823 millis. SELECT * FROM ELDER LIMIT ?, ? 
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50021} open
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50021} Header: [id, elder_name, gender, nation, age, address, medical_history, care_of_oneself, caregivers_name, relations_elder, phone, room, bed, portrait, file_id]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50021} Result: [13, 122, 1, 1, 1222, 1, 1, 1, 1, 1, 1, 1, 1, , null]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50021} Result: [14, 李某某, 1, 1, 188, 1, 1, 1, 李某某儿子, 1, 1, 1, 1, null, null]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50021} Result: [15, 李某某, 0, 1, 1943, 1, 1, 1, 1, 1, 1, 1, 1, null, null]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50021} Result: [18, 刘, 0, 汉, 12, 山大双误, dsad, dsad, 刘儿子, 1, 15934584985, 1, 1, null, 70]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50021} Result: [19, 刘2222, 1, buzhi, 12, 山大双误, dsad, dsad, 刘儿子, 1, 15934584985, 1, 1, null, 71]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50021} closed
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20005} clearParameters. 
+DEBUG http-nio-8081-exec-4 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-6 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20011} created. select * from elder e
+        left join file f on e.file_id=f.file_id
+         WHERE  id=?
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20011} Parameters : [19]
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20011} Types : [INTEGER]
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20011} executed. 1.2969 millis. select * from elder e
+        left join file f on e.file_id=f.file_id
+         WHERE  id=?
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20011, rs-50022} open
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20011, rs-50022} Header: [id, elder_name, gender, nation, age, address, medical_history, care_of_oneself, caregivers_name, relations_elder, phone, room, bed, portrait, file_id, file_id, file_url, file_name, ftp_url, ftp_name]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20011, rs-50022} Result: [19, 刘2222, 1, buzhi, 12, 山大双误, dsad, dsad, 刘儿子, 1, 15934584985, 1, 1, null, 71, 71, /www/images/yx, 新建 Microsoft Word 文档.docx, /www/images/yx, 2019-05-05 22:26:26-新建 Microsoft Word 文档.docx]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20011, rs-50022} closed
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20011} clearParameters. 
+DEBUG http-nio-8081-exec-6 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-7 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20012} created. select * from file
+        where file_id=?
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20012} Parameters : [71]
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20012} Types : [INTEGER]
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20012} executed. 1.003 millis. select * from file
+        where file_id=?
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20012, rs-50023} open
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20012, rs-50023} Header: [file_id, file_url, file_name, ftp_url, ftp_name]
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20012, rs-50023} Result: [71, /www/images/yx, 新建 Microsoft Word 文档.docx, /www/images/yx, 2019-05-05 22:26:26-新建 Microsoft Word 文档.docx]
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20012, rs-50023} closed
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20012} clearParameters. 
+DEBUG http-nio-8081-exec-7 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-9 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20011} Parameters : [19]
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20011} Types : [INTEGER]
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20011} executed. 1.2584 millis. select * from elder e
+        left join file f on e.file_id=f.file_id
+         WHERE  id=?
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20011, rs-50024} open
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20011, rs-50024} Header: [id, elder_name, gender, nation, age, address, medical_history, care_of_oneself, caregivers_name, relations_elder, phone, room, bed, portrait, file_id, file_id, file_url, file_name, ftp_url, ftp_name]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20011, rs-50024} Result: [19, 刘2222, 1, buzhi, 12, 山大双误, dsad, dsad, 刘儿子, 1, 15934584985, 1, 1, null, 71, 71, /www/images/yx, 新建 Microsoft Word 文档.docx, /www/images/yx, 2019-05-05 22:26:26-新建 Microsoft Word 文档.docx]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20011, rs-50024} closed
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20011} clearParameters. 
+DEBUG http-nio-8081-exec-9 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-8 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20012} Parameters : [71]
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20012} Types : [INTEGER]
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20012} executed. 1.2004 millis. select * from file
+        where file_id=?
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20012, rs-50025} open
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20012, rs-50025} Header: [file_id, file_url, file_name, ftp_url, ftp_name]
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20012, rs-50025} Result: [71, /www/images/yx, 新建 Microsoft Word 文档.docx, /www/images/yx, 2019-05-05 22:26:26-新建 Microsoft Word 文档.docx]
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20012, rs-50025} closed
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20012} clearParameters. 
+DEBUG http-nio-8081-exec-8 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-10 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20004} Parameters : []
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20004} Types : []
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20004} executed. 0.7878 millis. SELECT count(0) FROM ELDER
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50026} open
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50026} Header: [count(0)]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50026} Result: [11]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50026} closed
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20004} clearParameters. 
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20005} Parameters : [5, 5]
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20005} Types : [INTEGER, INTEGER]
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20005} executed. 0.8557 millis. SELECT * FROM ELDER LIMIT ?, ? 
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50027} open
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50027} Header: [id, elder_name, gender, nation, age, address, medical_history, care_of_oneself, caregivers_name, relations_elder, phone, room, bed, portrait, file_id]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50027} Result: [13, 122, 1, 1, 1222, 1, 1, 1, 1, 1, 1, 1, 1, , null]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50027} Result: [14, 李某某, 1, 1, 188, 1, 1, 1, 李某某儿子, 1, 1, 1, 1, null, null]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50027} Result: [15, 李某某, 0, 1, 1943, 1, 1, 1, 1, 1, 1, 1, 1, null, null]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50027} Result: [18, 刘, 0, 汉, 12, 山大双误, dsad, dsad, 刘儿子, 1, 15934584985, 1, 1, null, 70]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50027} Result: [19, 刘2222, 1, buzhi, 12, 山大双误, dsad, dsad, 刘儿子, 1, 15934584985, 1, 1, null, 71]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50027} closed
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20005} clearParameters. 
+DEBUG http-nio-8081-exec-10 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20004} Parameters : []
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20004} Types : []
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20004} executed. 0.8241 millis. SELECT count(0) FROM ELDER
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50028} open
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50028} Header: [count(0)]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50028} Result: [11]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50028} closed
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20004} clearParameters. 
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20006} Parameters : [5]
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20006} Types : [INTEGER]
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20006} executed. 0.9449 millis. SELECT * FROM ELDER LIMIT ? 
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50029} open
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50029} Header: [id, elder_name, gender, nation, age, address, medical_history, care_of_oneself, caregivers_name, relations_elder, phone, room, bed, portrait, file_id]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50029} Result: [1, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50029} Result: [2, 李某某, 0, 藏族, 88, 大同, 无, 无自理能力, 李某某的女儿, 女儿, 12738432348, 5, 2, , null]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50029} Result: [3, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50029} Result: [4, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50029} Result: [5, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50029} closed
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20006} clearParameters. 
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-4 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20004} Parameters : []
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20004} Types : []
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20004} executed. 0.6265 millis. SELECT count(0) FROM ELDER
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50030} open
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50030} Header: [count(0)]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50030} Result: [11]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50030} closed
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20004} clearParameters. 
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20005} Parameters : [10, 5]
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20005} Types : [INTEGER, INTEGER]
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20005} executed. 0.8115 millis. SELECT * FROM ELDER LIMIT ?, ? 
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50031} open
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50031} Header: [id, elder_name, gender, nation, age, address, medical_history, care_of_oneself, caregivers_name, relations_elder, phone, room, bed, portrait, file_id]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50031} Result: [20, 222, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, null, 72]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50031} closed
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20005} clearParameters. 
+DEBUG http-nio-8081-exec-4 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-6 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20011} Parameters : [20]
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20011} Types : [INTEGER]
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20011} executed. 1.0826 millis. select * from elder e
+        left join file f on e.file_id=f.file_id
+         WHERE  id=?
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20011, rs-50032} open
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20011, rs-50032} Header: [id, elder_name, gender, nation, age, address, medical_history, care_of_oneself, caregivers_name, relations_elder, phone, room, bed, portrait, file_id, file_id, file_url, file_name, ftp_url, ftp_name]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20011, rs-50032} Result: [20, 222, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, null, 72, 72, /www/images/yx, bb.docx, /www/images/yx, 2019-06-16 21:01:22-bb.docx]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20011, rs-50032} closed
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20011} clearParameters. 
+DEBUG http-nio-8081-exec-6 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-7 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20012} Parameters : [72]
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20012} Types : [INTEGER]
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20012} executed. 0.8784 millis. select * from file
+        where file_id=?
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20012, rs-50033} open
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20012, rs-50033} Header: [file_id, file_url, file_name, ftp_url, ftp_name]
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20012, rs-50033} Result: [72, /www/images/yx, bb.docx, /www/images/yx, 2019-06-16 21:01:22-bb.docx]
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20012, rs-50033} closed
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20012} clearParameters. 
+DEBUG http-nio-8081-exec-7 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-9 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20004} Parameters : []
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20004} Types : []
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20004} executed. 0.955 millis. SELECT count(0) FROM ELDER
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50034} open
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50034} Header: [count(0)]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50034} Result: [11]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50034} closed
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20004} clearParameters. 
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20005} Parameters : [5, 5]
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20005} Types : [INTEGER, INTEGER]
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20005} executed. 0.8142 millis. SELECT * FROM ELDER LIMIT ?, ? 
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50035} open
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50035} Header: [id, elder_name, gender, nation, age, address, medical_history, care_of_oneself, caregivers_name, relations_elder, phone, room, bed, portrait, file_id]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50035} Result: [13, 122, 1, 1, 1222, 1, 1, 1, 1, 1, 1, 1, 1, , null]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50035} Result: [14, 李某某, 1, 1, 188, 1, 1, 1, 李某某儿子, 1, 1, 1, 1, null, null]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50035} Result: [15, 李某某, 0, 1, 1943, 1, 1, 1, 1, 1, 1, 1, 1, null, null]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50035} Result: [18, 刘, 0, 汉, 12, 山大双误, dsad, dsad, 刘儿子, 1, 15934584985, 1, 1, null, 70]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50035} Result: [19, 刘2222, 1, buzhi, 12, 山大双误, dsad, dsad, 刘儿子, 1, 15934584985, 1, 1, null, 71]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50035} closed
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20005} clearParameters. 
+DEBUG http-nio-8081-exec-9 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-10 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20004} Parameters : []
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20004} Types : []
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20004} executed. 0.8504 millis. SELECT count(0) FROM ELDER
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50036} open
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50036} Header: [count(0)]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50036} Result: [11]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50036} closed
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20004} clearParameters. 
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20006} Parameters : [5]
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20006} Types : [INTEGER]
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20006} executed. 0.9775 millis. SELECT * FROM ELDER LIMIT ? 
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50037} open
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50037} Header: [id, elder_name, gender, nation, age, address, medical_history, care_of_oneself, caregivers_name, relations_elder, phone, room, bed, portrait, file_id]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50037} Result: [1, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50037} Result: [2, 李某某, 0, 藏族, 88, 大同, 无, 无自理能力, 李某某的女儿, 女儿, 12738432348, 5, 2, , null]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50037} Result: [3, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50037} Result: [4, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50037} Result: [5, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20006, rs-50037} closed
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20006} clearParameters. 
+DEBUG http-nio-8081-exec-10 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-7 druid.sql.Connection - {conn-10001} connected
+DEBUG http-nio-8081-exec-7 druid.sql.Connection - {conn-10002} connected
+DEBUG http-nio-8081-exec-7 druid.sql.Connection - {conn-10003} connected
+DEBUG http-nio-8081-exec-7 druid.sql.Connection - {conn-10004} connected
+DEBUG http-nio-8081-exec-7 druid.sql.Connection - {conn-10005} connected
+DEBUG http-nio-8081-exec-7 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20000} created. SELECT * FROM user
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20000} executed. 9.6308 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} open
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} closed
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-7 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-8 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20000} executed. 3.269 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} open
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-8 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} closed
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-8 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-8 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20001} created. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20001} Parameters : [xuge, xuge]
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20001} Types : [VARCHAR, VARCHAR]
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20001} executed. 34.3955 millis. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20001} clearParameters. 
+DEBUG http-nio-8081-exec-8 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10001} connected
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10002} connected
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10003} connected
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10004} connected
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10005} connected
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20000} created. SELECT * FROM user
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20000} executed. 16.3167 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} open
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [4, xuge, xuge]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} closed
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20000} executed. 2.7535 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} open
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Result: [4, xuge, xuge]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} closed
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-4 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20000} executed. 3.0985 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} open
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} Result: [4, xuge, xuge]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} closed
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-4 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-5 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20000} executed. 0.7357 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50003} open
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50003} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50003} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50003} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50003} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50003} Result: [4, xuge, xuge]
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50003} closed
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-5 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-5 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20001} created. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20001} Parameters : [gg, gg]
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20001} Types : [VARCHAR, VARCHAR]
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20001} executed. 6.8387 millis. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20001} clearParameters. 
+DEBUG http-nio-8081-exec-5 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG Thread-3 druid.sql.Connection - {conn-10001} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10002} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10003} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10004} closed
+DEBUG Thread-3 druid.sql.Statement - {conn-10005, pstmt-20000} closed
+DEBUG Thread-3 druid.sql.Statement - {conn-10005, pstmt-20001} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10005} closed
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10001} connected
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10002} connected
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10003} connected
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10004} connected
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10005} connected
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20000} created. SELECT * FROM user
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20000} executed. 12.7606 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} open
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [4, xuge, xuge]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [5, gg, gg]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} closed
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-6 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20000} executed. 2.9233 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} open
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Result: [4, xuge, xuge]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Result: [5, gg, gg]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} closed
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-6 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-7 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20000} executed. 0.7956 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} open
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} Result: [4, xuge, xuge]
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} Result: [5, gg, gg]
+DEBUG http-nio-8081-exec-7 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} closed
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-7 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-7 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20001} created. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20001} Parameters : [ww, ww]
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20001} Types : [VARCHAR, VARCHAR]
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20001} executed. 8.7953 millis. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-7 druid.sql.Statement - {conn-10005, pstmt-20001} clearParameters. 
+DEBUG http-nio-8081-exec-7 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG Thread-3 druid.sql.Connection - {conn-10001} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10002} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10003} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10004} closed
+DEBUG Thread-3 druid.sql.Statement - {conn-10005, pstmt-20000} closed
+DEBUG Thread-3 druid.sql.Statement - {conn-10005, pstmt-20001} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10005} closed
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10001} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10002} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10003} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10004} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10005} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10004} pool-connect
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20000} created. SELECT * FROM user
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20001} created. SELECT * FROM user
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20001} Parameters : []
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20001} Types : []
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20001} executed. 13.9988 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20000} executed. 13.9976 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50001} open
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50000} open
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50000} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50001} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50000} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50001} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50000} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50001} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50000} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50001} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50000} Result: [4, xuge, xuge]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50001} Result: [4, xuge, xuge]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50000} Result: [5, gg, gg]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50001} Result: [5, gg, gg]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50000} Result: [6, ww, ww]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50001} Result: [6, ww, ww]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50000} closed
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50001} closed
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20001} clearParameters. 
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10004} pool-recycle
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10004} pool-connect
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10004, pstmt-20002} created. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10004, pstmt-20002} Parameters : [qq, qq]
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10004, pstmt-20002} Types : [VARCHAR, VARCHAR]
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10004, pstmt-20002} executed. 29.0767 millis. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10004, pstmt-20002} clearParameters. 
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10004} pool-recycle
+DEBUG http-nio-8081-exec-6 druid.sql.Connection - {conn-10004} pool-connect
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10004, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10004, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10004, pstmt-20000} executed. 1.2076 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50002} open
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50002} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50002} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50002} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50002} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50002} Result: [4, xuge, xuge]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50002} Result: [5, gg, gg]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50002} Result: [6, ww, ww]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50002} Result: [7, qq, qq]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50002} closed
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10004, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-6 druid.sql.Connection - {conn-10004} pool-recycle
+DEBUG http-nio-8081-exec-9 druid.sql.Connection - {conn-10004} pool-connect
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10004, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10004, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10004, pstmt-20000} executed. 1.0882 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50003} open
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50003} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50003} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50003} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50003} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50003} Result: [4, xuge, xuge]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50003} Result: [5, gg, gg]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50003} Result: [6, ww, ww]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50003} Result: [7, qq, qq]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50003} closed
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10004, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-9 druid.sql.Connection - {conn-10004} pool-recycle
+DEBUG http-nio-8081-exec-9 druid.sql.Connection - {conn-10004} pool-connect
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10004, pstmt-20002} Parameters : [ee, 123]
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10004, pstmt-20002} Types : [VARCHAR, VARCHAR]
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10004, pstmt-20002} executed. 19.3787 millis. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10004, pstmt-20002} clearParameters. 
+DEBUG http-nio-8081-exec-9 druid.sql.Connection - {conn-10004} pool-recycle
+DEBUG Thread-3 druid.sql.Connection - {conn-10001} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10002} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10003} closed
+DEBUG Thread-3 druid.sql.Statement - {conn-10005, pstmt-20001} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10005} closed
+DEBUG Thread-3 druid.sql.Statement - {conn-10004, pstmt-20000} closed
+DEBUG Thread-3 druid.sql.Statement - {conn-10004, pstmt-20002} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10004} closed
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10001} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10002} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10003} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10004} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10005} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10004} pool-connect
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20000} created. SELECT * FROM user
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20001} created. SELECT * FROM user
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20001} Parameters : []
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20001} Types : []
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20000} executed. 14.36 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20001} executed. 14.3608 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} open
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20001, rs-50001} open
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20001, rs-50001} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20001, rs-50001} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20001, rs-50001} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20001, rs-50001} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20001, rs-50001} closed
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} closed
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20001} clearParameters. 
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10004} pool-recycle
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20002} created. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20002} Parameters : [ww, ww]
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20002} Types : [VARCHAR, VARCHAR]
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20002} executed. 171.124 millis. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20002} clearParameters. 
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG Thread-3 druid.sql.Connection - {conn-10001} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10002} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10003} closed
+DEBUG Thread-3 druid.sql.Statement - {conn-10004, pstmt-20001} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10004} closed
+DEBUG Thread-3 druid.sql.Statement - {conn-10005, pstmt-20000} closed
+DEBUG Thread-3 druid.sql.Statement - {conn-10005, pstmt-20002} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10005} closed
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10001} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10002} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10003} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10004} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10005} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10004} pool-connect
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20001} created. SELECT * FROM user
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20000} created. SELECT * FROM user
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20001} Parameters : []
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20001} Types : []
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20001} executed. 14.4009 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20000} executed. 14.4006 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50000} open
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50001} open
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50001} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50000} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50001} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50000} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50000} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50001} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50000} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50001} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50000} Result: [9, ww, ww]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50001} Result: [9, ww, ww]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50000} closed
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50001} closed
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10005, pstmt-20001} clearParameters. 
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10004} pool-recycle
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10004} pool-connect
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10004, pstmt-20002} created. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10004, pstmt-20002} Parameters : [qq, qq]
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10004, pstmt-20002} Types : [VARCHAR, VARCHAR]
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10004, pstmt-20002} executed. 31.0808 millis. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10004, pstmt-20002} clearParameters. 
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10004} pool-recycle
+DEBUG Thread-3 druid.sql.Connection - {conn-10001} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10002} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10003} closed
+DEBUG Thread-3 druid.sql.Statement - {conn-10005, pstmt-20001} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10005} closed
+DEBUG Thread-3 druid.sql.Statement - {conn-10004, pstmt-20000} closed
+DEBUG Thread-3 druid.sql.Statement - {conn-10004, pstmt-20002} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10004} closed
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10001} connected
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10002} connected
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10003} connected
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10004} connected
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10005} connected
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10004} pool-connect
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10004, pstmt-20001} created. SELECT * FROM user
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20000} created. SELECT * FROM user
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10004, pstmt-20001} Parameters : []
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10004, pstmt-20001} Types : []
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10004, pstmt-20001} executed. 13.2938 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20000} executed. 13.2937 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10004, pstmt-20001, rs-50001} open
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} open
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10004, pstmt-20001, rs-50001} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10004, pstmt-20001, rs-50001} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10004, pstmt-20001, rs-50001} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10004, pstmt-20001, rs-50001} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [9, ww, ww]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10004, pstmt-20001, rs-50001} Result: [9, ww, ww]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [10, qq, qq]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10004, pstmt-20001, rs-50001} Result: [10, qq, qq]
+DEBUG http-nio-8081-exec-3 druid.sql.ResultSet - {conn-10004, pstmt-20001, rs-50001} closed
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} closed
+DEBUG http-nio-8081-exec-3 druid.sql.Statement - {conn-10004, pstmt-20001} clearParameters. 
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-3 druid.sql.Connection - {conn-10004} pool-recycle
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20002} created. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20002} Parameters : [ee, ee]
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20002} Types : [VARCHAR, VARCHAR]
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20002} executed. 6.3437 millis. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20002} clearParameters. 
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG Thread-3 druid.sql.Connection - {conn-10001} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10002} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10003} closed
+DEBUG Thread-3 druid.sql.Statement - {conn-10004, pstmt-20001} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10004} closed
+DEBUG Thread-3 druid.sql.Statement - {conn-10005, pstmt-20000} closed
+DEBUG Thread-3 druid.sql.Statement - {conn-10005, pstmt-20002} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10005} closed
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10001} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10002} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10003} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10004} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10005} connected
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10004} pool-connect
+DEBUG http-nio-8081-exec-4 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20001} created. SELECT * FROM user
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20000} created. SELECT * FROM user
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20001} Parameters : []
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20001} Types : []
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20001} executed. 12.4442 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20000} executed. 12.4453 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50000} open
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50001} open
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50000} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50001} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50000} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50001} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50001} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50000} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50001} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50000} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-4 druid.sql.ResultSet - {conn-10005, pstmt-20001, rs-50001} closed
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10004, pstmt-20000, rs-50000} closed
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10005, pstmt-20001} clearParameters. 
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10004, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10004} pool-recycle
+DEBUG http-nio-8081-exec-4 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-4 druid.sql.Connection - {conn-10004} pool-connect
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10004, pstmt-20002} created. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10004, pstmt-20002} Parameters : [qqq, qqq]
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10004, pstmt-20002} Types : [VARCHAR, VARCHAR]
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10004, pstmt-20002} executed. 32.12 millis. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-4 druid.sql.Statement - {conn-10004, pstmt-20002} clearParameters. 
+DEBUG http-nio-8081-exec-4 druid.sql.Connection - {conn-10004} pool-recycle
+DEBUG Thread-3 druid.sql.Connection - {conn-10001} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10002} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10003} closed
+DEBUG Thread-3 druid.sql.Statement - {conn-10005, pstmt-20001} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10005} closed
+DEBUG Thread-3 druid.sql.Statement - {conn-10004, pstmt-20000} closed
+DEBUG Thread-3 druid.sql.Statement - {conn-10004, pstmt-20002} closed
+DEBUG Thread-3 druid.sql.Connection - {conn-10004} closed
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10001} connected
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10002} connected
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10003} connected
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10004} connected
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10005} connected
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20000} created. SELECT * FROM user
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20000} executed. 14.9121 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} open
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50000} closed
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20001} created. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20001} Parameters : [qqq, qqq]
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20001} Types : [VARCHAR, VARCHAR]
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20001} executed. 25.0678 millis. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20001} clearParameters. 
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10005, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10005, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10005, pstmt-20000} executed. 2.9237 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} open
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} Result: [13, qqq, qqq]
+DEBUG http-nio-8081-exec-2 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50001} closed
+DEBUG http-nio-8081-exec-2 druid.sql.Statement - {conn-10005, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-2 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-5 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20000} executed. 1.0088 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} open
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} Result: [13, qqq, qqq]
+DEBUG http-nio-8081-exec-5 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50002} closed
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-5 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-5 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20001} Parameters : [ww, ww]
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20001} Types : [VARCHAR, VARCHAR]
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20001} executed. 18.6838 millis. insert into user
+        (user_name,pass_word)
+        value
+        (?,?)
+DEBUG http-nio-8081-exec-5 druid.sql.Statement - {conn-10005, pstmt-20001} clearParameters. 
+DEBUG http-nio-8081-exec-5 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-9 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20000} Parameters : []
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20000} Types : []
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20000} executed. 0.9623 millis. SELECT * FROM user
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50003} open
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50003} Header: [id, user_name, pass_word]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50003} Result: [1, admin, 123456]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50003} Result: [2, xu, 123456]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50003} Result: [3, yanxu, yanxu]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50003} Result: [13, qqq, qqq]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50003} Result: [14, ww, ww]
+DEBUG http-nio-8081-exec-9 druid.sql.ResultSet - {conn-10005, pstmt-20000, rs-50003} closed
+DEBUG http-nio-8081-exec-9 druid.sql.Statement - {conn-10005, pstmt-20000} clearParameters. 
+DEBUG http-nio-8081-exec-9 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20002} created. SELECT count(0) FROM elder e LEFT JOIN file f ON e.file_id = f.file_id
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20002} Parameters : []
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20002} Types : []
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20002} executed. 1.9654 millis. SELECT count(0) FROM elder e LEFT JOIN file f ON e.file_id = f.file_id
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20002, rs-50004} open
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20002, rs-50004} Header: [count(0)]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20002, rs-50004} Result: [11]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20002, rs-50004} closed
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20002} clearParameters. 
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20003} created. select * from elder e
+        left join file f on e.file_id=f.file_id LIMIT ? 
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20003} Parameters : [5]
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20003} Types : [INTEGER]
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20003} executed. 1.5755 millis. select * from elder e
+        left join file f on e.file_id=f.file_id LIMIT ? 
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20003, rs-50005} open
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20003, rs-50005} Header: [id, elder_name, gender, nation, age, address, medical_history, care_of_oneself, caregivers_name, relations_elder, phone, room, bed, portrait, file_id, file_id, file_url, file_name, ftp_url, ftp_name]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20003, rs-50005} Result: [18, 刘, 0, 汉, 12, 山大双误, dsad, dsad, 刘儿子, 1, 15934584985, 1, 1, null, 70, 70, /www/images/yx, login_bg1.png, /www/images/yx, 2019-05-05 22:23:52-login_bg1.png]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20003, rs-50005} Result: [19, 刘2222, 1, buzhi, 12, 山大双误, dsad, dsad, 刘儿子, 1, 15934584985, 1, 1, null, 71, 71, /www/images/yx, 新建 Microsoft Word 文档.docx, /www/images/yx, 2019-05-05 22:26:26-新建 Microsoft Word 文档.docx]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20003, rs-50005} Result: [20, 222, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, null, 72, 72, /www/images/yx, bb.docx, /www/images/yx, 2019-06-16 21:01:22-bb.docx]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20003, rs-50005} Result: [1, 刘某某, 1, 汉族, 99, 太原, 无, 有自理能力, 刘某某儿子, 儿子, 13834567483, 2, 1, , null, null, null, null, null, null]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20003, rs-50005} Result: [2, 李某某, 0, 藏族, 88, 大同, 无, 无自理能力, 李某某的女儿, 女儿, 12738432348, 5, 2, , null, null, null, null, null, null]
+DEBUG http-nio-8081-exec-1 druid.sql.ResultSet - {conn-10005, pstmt-20003, rs-50005} closed
+DEBUG http-nio-8081-exec-1 druid.sql.Statement - {conn-10005, pstmt-20003} clearParameters. 
+DEBUG http-nio-8081-exec-1 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-6 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20004} created. insert into file
+         ( file_url,
+            file_name,
+            ftp_url,
+            ftp_name ) 
+         values ( ?,
+            ?,
+            ?,
+            ? )
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20004} Parameters : [/www/images/yx, 现代商务Word简历模板_财务类_.doc, /www/images/yx, 2019-06-17 21:23:46-现代商务Word简历模板_财务类_.doc]
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20004} Types : [VARCHAR, VARCHAR, VARCHAR, VARCHAR]
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20004} executed. 7.9763 millis. insert into file
+         ( file_url,
+            file_name,
+            ftp_url,
+            ftp_name ) 
+         values ( ?,
+            ?,
+            ?,
+            ? )
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50006} open
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50006} Header: [GENERATED_KEY]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50006} Result: [73]
+DEBUG http-nio-8081-exec-6 druid.sql.ResultSet - {conn-10005, pstmt-20004, rs-50006} closed
+DEBUG http-nio-8081-exec-6 druid.sql.Statement - {conn-10005, pstmt-20004} clearParameters. 
+DEBUG http-nio-8081-exec-6 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-10 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20005} created. select * from file
+        where file_id=?
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20005} Parameters : [73]
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20005} Types : [INTEGER]
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20005} executed. 1.0503 millis. select * from file
+        where file_id=?
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50007} open
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50007} Header: [file_id, file_url, file_name, ftp_url, ftp_name]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50007} Result: [73, /www/images/yx, 现代商务Word简历模板_财务类_.doc, /www/images/yx, 2019-06-17 21:23:46-现代商务Word简历模板_财务类_.doc]
+DEBUG http-nio-8081-exec-10 druid.sql.ResultSet - {conn-10005, pstmt-20005, rs-50007} closed
+DEBUG http-nio-8081-exec-10 druid.sql.Statement - {conn-10005, pstmt-20005} clearParameters. 
+DEBUG http-nio-8081-exec-10 druid.sql.Connection - {conn-10005} pool-recycle
+DEBUG http-nio-8081-exec-8 druid.sql.Connection - {conn-10005} pool-connect
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20006} created. insert into elder
+       ( elder_name,gender,nation,age,address,medical_history,care_of_oneself,caregivers_name,relations_elder,phone,room,bed,portrait,file_id ) 
+       values ( ?,?,?,?,?,?,?,?,?,?,?,?,?,? )
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20006} Parameters : [张某某, 1, 汉, 12, 山大双误, 无, 有, 张某某儿子, 儿子, 15934584985, 2, 1, null, 73]
+DEBUG http-nio-8081-exec-8 druid.sql.Statement - {conn-10005, pstmt-20006} Types : [VARCHAR, INTEGER, VARCHAR, INTEGER, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, VARCHAR, INTEGER, INTEGER, OTHER, VARCHAR]
